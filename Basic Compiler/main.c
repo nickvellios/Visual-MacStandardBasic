@@ -1855,37 +1855,29 @@ void  InitializeToolbox( void )
    InitCursor();
 }
 
-
-main()
-{
-	short     a, b, scope;
-	struct VarTableStruct1  *BPtr1;
-	struct VarTableStruct2  *BPtr4;
-	struct CallTableStruct1 *BPtr2;
-	struct CallTableStruct2 *BPtr3;
-	ProcessSerialNumber		PSN;
-	ProcessInfoRec			info;
-	FSSpec					FS1;
-	Str31					name;
-	char	bg[100];
-	char	copyright[]="Visual MacStandardBasic 4.0 Compiler Copyright 1999 ZCurve Software & Bob Hays All Rights Reserved\n";
-	
-	MaxApplZone();
-
-	// Set SIOUX Settings
-	SIOUXSettings.autocloseonquit = true;
-	SIOUXSettings.asktosaveonclose = false;
-	SIOUXSettings.setupmenus = false;
-	
-	// *******Time Limiter
-	//if( !doendupdates( ) ) exit(0);
-	
-	InitializeToolbox();
-	getIDEspec();
-
-	compile_log_init();
-	
-	a = compile_project(  );
+main() {
+    short a, b, scope;
+    struct VarTableStruct1 *BPtr1;
+    struct VarTableStruct2 *BPtr4;
+    struct CallTableStruct1 *BPtr2;
+    struct CallTableStruct2 *BPtr3;
+    ProcessSerialNumber PSN;
+    ProcessInfoRec info;
+    FSSpec FS1;
+    Str31 name;
+    char bg[100];
+    char copyright[] = "Visual MacStandardBasic Copyright 2000 Squirrel Software - All Rights Reserved\n";
+    MaxApplZone();
+    // Set SIOUX Settings
+    SIOUXSettings.autocloseonquit = true;
+    SIOUXSettings.asktosaveonclose = false;
+    SIOUXSettings.setupmenus = false;
+    // *******Time Limiter
+    //if( !doendupdates( ) ) exit(0);
+    InitializeToolbox();
+    getIDEspec();
+    compile_log_init();
+    a = compile_project();
 //getchar();   // Debug Code #############
 	if(a<0) return(1);
 	
