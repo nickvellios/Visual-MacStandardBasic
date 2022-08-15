@@ -9,9 +9,8 @@
 //  nick@vellios.com
 //  http://www.Vellios.com
 //
-
-#define kLoopTypeFor	1
-#define kLoopTypeIf		2
-#define kLoopTypeElse	3
-#define kLoopTypeWhile	4
-#define kLoopTypeUntil	5
+#define kLoopTypeFor    1
+#define kLoopTypeIf        2
+#define kLoopTypeElse    3
+#define kLoopTypeWhile    4
+#define kLoopTypeUntil    5
